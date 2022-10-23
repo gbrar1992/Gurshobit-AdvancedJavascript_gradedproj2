@@ -48,8 +48,8 @@ if(checkLocalStorage()){
         if(isValidUsername && isValidPassword){
             usernameErrorElement.innerText = '';
             passwordErrorElement.innerText = '';
-            usernameElement.style.display = "none";
-            passwordElement.style.display = "none";
+            usernameErrorElement.style.display = "none";
+            passwordErrorElement.style.display = "none";
             loginButtonElement.innerText = 'LoggedIn';
             localStorage.setItem('isLogin',true);
             redirect();
