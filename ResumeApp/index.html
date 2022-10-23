@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HRMS App - Login</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container-fluid background-grey">
+            <div class="row justify-content-center align-items-center h-vh100">
+                <div class="col-4">
+                    <div class="div-flex flex-column justify-content-center align-items-center background-yellow p-5 rounded-lg shadow-lg">
+                        <div class="form-element"><h1 class="m-0">Login</h1></div>
+                        <div class="form-element">
+                            <label for="usernameInput" class="form-label font-weight-700">Username</label>
+                            <input type="email" name="username" autocomplete="off" class="form-field" id="usernameInput" />
+                            <p class="text-left m-0 mt-1" id="usernameErrorText" style="display: none;"></p>
+                        </div>
+                        <div class="form-element">
+                            <label for="passwordInput" class="form-label font-weight-700">Password</label>
+                            <input type="password" name="password" autocomplete="off" class="form-field" id="passwordInput" />
+                            <p class="text-left m-0 mt-1" id="passwordErrorText" style="display: none;"></p>
+                        </div>
+
+                        <div class="form-element justify-content-center align-items-center">
+                            <button class="button background-green text-white" id="loginButton">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/common.js"></script>
+        <script src="js/login.js" defer></script>
+    </body>
+</html>

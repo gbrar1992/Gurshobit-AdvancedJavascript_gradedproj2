@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HRMS App - Resumes</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container-fluid background-grey">
+            <div class="row justify-content-center align-items-start h-vh100">
+                <div class="col-9">
+                    <div class="row justify-content-between align-items-center mb-2">
+                        <div class="col-12">
+                            <h1 class="text-center font-size-5 m-0">Resume App</h1>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between align-items-center mb-2">
+                        <div class="col-3 text-left"><button class="button background-sky-blue" id="previousResumeButton" style="display: none;">Previous</button></div>
+                        <div class="col-6"><div class="form-element"><input type="search" name="searchResume" id="searchResumeInput" class="form-field"></div></div>
+                        <div class="col-3 text-right"><button class="button background-sky-blue" id="nextResumeButton" style="display: none;">Next</button></div>
+                    </div>
+                    <div class="row background-white rounded-lg shadow-lg" id="resumeDiv">
+                        <div class="col-12">
+                            <div class="row justify-content-between align-items-center background-sky-blue mb-2 rounded-top-lg">
+                                <div class="col-3"></div>
+                                <div class="col-6">
+                                    <div class="div-flex flex-column">
+                                        <h1 class="text-center" id="personNameText">John Doe</h1>
+                                        <p class="text-center font-weight-700"><span>Applied For:</span> <span id="appliedForText">Software Developer</span></p>
+                                    </div>
+                                </div>
+                                <div class="col-3"><div class="div-flex justify-content-center align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="#000000" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div></div>
+                            </div>
+                            <div class="row p-3">
+                                <div class="col-2">
+                                    <div class="div-flex flex-column background-light-red p-3">
+                                        <div class="background-grey text-left font-weight-700 p-1">Personal Information</div>
+                                        <ul class="list-style-none text-right p-0 m-0">
+                                            <li id="mobileText">9999999999</li>
+                                            <li id="emailText">email@email.com</li>
+                                            <li id="profileText"><a href="https://linkedin.com">LinkedIn</a></li>
+                                        </ul>
+                                        <div class="background-grey text-left font-weight-700 p-1">Technical Skills</div>
+                                        <ul class="list-style-none text-right p-0 m-0" id="technicalSkills">
+                                            <li>HTML</li>
+                                            <li>CSS</li>
+                                            <li>JavaScript</li>
+                                        </ul>
+                                        <div class="background-grey text-left font-weight-700 p-1">Hobbies</div>
+                                        <ul class="list-style-none text-right p-0 m-0" id="hobbies">
+                                            <li>WildLife</li>
+                                            <li>Dance</li>
+                                            <li>WorkOut</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-10">
+                                    <div class="row px-3">
+                                        <div class="col-12">
+                                            <div class="div-flex flex-column">
+                                                <div class="section-title">
+                                                    <h2 class="m-0">Work Experience in Previous Company</h2>
+                                                </div>
+                                                <ul class="list-style-none m-0 p-2 mt-2">
+                                                    <li class="mb-2">
+                                                        <b class="font-wight-700">Company Name:</b>
+                                                        <span id="companyNameText"></span>
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <b class="font-wight-700">Position:</b>
+                                                        <span id="positionText"></span>
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <b class="font-wight-700">Start Date:</b>
+                                                        <span id="startDateText"></span>
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <b class="font-wight-700">Position:</b>
+                                                        <span id="endDateText"></span>
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <b class="font-wight-700">Summary:</b>
+                                                        <span class="text-justify" id="summaryText"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="div-flex flex-column">
+                                                <div class="section-title">
+                                                    <h2 class="m-0">Projects</h2>
+                                                </div>
+                                                <p class="text-justify m-0 p-2 mt-2"><b id="projectNameText"></b><span id="projectSummaryText"></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="div-flex flex-column">
+                                                <div class="section-title">
+                                                    <h2 class="m-0">Education</h2>
+                                                </div>
+                                                <p class="text-justify m-0 p-2 mt-2"><b id="projectNameText"></b><span id="projectSummaryText"></span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row background-white rounded-lg shadow-lg align-items-center justify-content-center p-5" style="display: none;" id="noResultsDiv">
+                        <div class="col-4">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-frown"><circle cx="12" cy="12" r="10"></circle><path d="M16 16s-1.5-2-4-2-4 2-4 2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                                </div>
+                                <div class="col-8">
+                                    <h1 class="font-weight-700">No Results Found.</h1>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <script src="js/common.js"></script>
+        <script src="js/resume.js" defer></script>
+    </body>
+</html>     
