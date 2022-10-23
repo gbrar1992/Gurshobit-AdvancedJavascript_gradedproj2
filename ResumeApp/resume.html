@@ -3,7 +3,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HRMS App - Resumes</title>
+        <title>HRMS App - Resume Applications</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -12,18 +12,18 @@
                 <div class="col-9">
                     <div class="row justify-content-between align-items-center mb-2">
                         <div class="col-12">
-                            <h1 class="text-center font-size-5 m-0">Resume App</h1>
+                            <h1 class="text-center font-size-5 m-0">Applicant's Resume</h1>
                         </div>
                     </div>
                     <div class="row justify-content-between align-items-center mb-2">
                         <div class="col-3 text-left"><button class="button background-sky-blue" id="previousResumeButton" style="display: none;">Previous</button></div>
-                        <div class="col-6"><div class="form-element"><input type="search" name="searchResume" id="searchResumeInput" class="form-field"></div></div>
+                        <div class="col-6"><div class="form-element"><input placeholder="Search by Role Applied For" type="search" name="searchResume" id="searchResumeInput" class="form-field"></div></div>
                         <div class="col-3 text-right"><button class="button background-sky-blue" id="nextResumeButton" style="display: none;">Next</button></div>
                     </div>
                     <div class="row background-white rounded-lg shadow-lg" id="resumeDiv">
                         <div class="col-12">
                             <div class="row justify-content-between align-items-center background-sky-blue mb-2 rounded-top-lg">
-                                <div class="col-3"></div>
+                                <div class="col-3"><div class="div-flex justify-content-center align-items-center"><button class="button background-yellow" id="logoutButton">Logout</button></div></div>
                                 <div class="col-6">
                                     <div class="div-flex flex-column">
                                         <h1 class="text-center" id="personNameText">John Doe</h1>
@@ -37,9 +37,9 @@
                                     <div class="div-flex flex-column background-light-red p-3">
                                         <div class="background-grey text-left font-weight-700 p-1">Personal Information</div>
                                         <ul class="list-style-none text-right p-0 m-0">
-                                            <li id="mobileText">9999999999</li>
-                                            <li id="emailText">email@email.com</li>
-                                            <li id="profileText"><a href="https://linkedin.com">LinkedIn</a></li>
+                                            <li class="p-1" id="mobileText">9999999999</li>
+                                            <li class="p-1" id="emailText">email@email.com</li>
+                                            <li class="p-1" id="profileText"><a href="https://linkedin.com">LinkedIn</a></li>
                                         </ul>
                                         <div class="background-grey text-left font-weight-700 p-1">Technical Skills</div>
                                         <ul class="list-style-none text-right p-0 m-0" id="technicalSkills">
@@ -99,7 +99,44 @@
                                                 <div class="section-title">
                                                     <h2 class="m-0">Education</h2>
                                                 </div>
-                                                <p class="text-justify m-0 p-2 mt-2"><b id="projectNameText"></b><span id="projectSummaryText"></span></p>
+                                                <ul class="text-justify m-0 mt-2" id="educationText"></ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="div-flex flex-column">
+                                                <div class="section-title">
+                                                    <h2 class="m-0">Internship</h2>
+                                                </div>
+                                                <ul class="m-0 mt-2">
+                                                    <li class="mb-2">
+                                                        <b class="font-wight-700">Company Name:</b>
+                                                        <span id="internshipCompanyNameText"></span>
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <b class="font-wight-700">Position:</b>
+                                                        <span id="internshipPositionText"></span>
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <b class="font-wight-700">Start Date:</b>
+                                                        <span id="internshipStartDateText"></span>
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <b class="font-wight-700">Position:</b>
+                                                        <span id="internshipEndDateText"></span>
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <b class="font-wight-700">Summary:</b>
+                                                        <span class="text-justify" id="internshipSummaryText"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="div-flex flex-column">
+                                                <div class="section-title">
+                                                    <h2 class="m-0">Achievements</h2>
+                                                </div>
+                                                <ul class="text-justify m-0 mt-2" id="achievementsText"></ul>
                                             </div>
                                         </div>
                                     </div>
