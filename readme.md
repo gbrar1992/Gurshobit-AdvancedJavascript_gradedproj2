@@ -1,7 +1,7 @@
 # About Project
-**Name:** Employee Management System
+**Name:** Human Resource Management System - Resume Tracker
 
-**Description:** Advanced Javascript Project
+**Description:** Human Resource Management System (Resume Tracker) - An Advanced Javascript Project
 
 **Author:** Gurshobit Brar
 
